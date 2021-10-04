@@ -23,3 +23,27 @@ This means we can estimate the population standard deviatoin from looking at the
 - -> estimate that with 95% confidence that real population mean = sample mean +- st_error*1.96?
 
 I found this blog post useful: https://dpananos.github.io/posts/2019/08/blog-post-23/
+
+
+# Different things you might want to test
+
+## How likely is this distibution of a binary outcome due to the same underlying probability distribution
+
+Binomial test
+
+## How likely is this continuous variable distribution to result in a sample average of X
+
+ttest
+
+## How likely are these two continuous distributions resultin from the same underlying distribution
+
+Two sample ttest
+In python we can do:
+```py
+from scipy.stats import ttest_ind
+tstatistic, pval = ttest_ind(a_distibution, b_distribution)
+
+```
+
+
+## 
