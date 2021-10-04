@@ -46,4 +46,59 @@ tstatistic, pval = ttest_ind(a_distibution, b_distribution)
 ```
 
 
-## 
+## How likely are these multiple distributions all to be from the same underlying distribution
+
+We could do multiple two-sample ttests, comparing each pair. 
+However, as we add more distributions we run the risk of false discovery.
+In stead recommends the _ANOVA_ (analysis of variance) method. 
+This tests the null hypothesis that all groups have the same population mean.
+
+```py
+from scipy.stats import f_oneway
+fstat, pval = f_oneway(scores_mathematicians, scores_writers, scores_psychologists)
+```
+
+If the p-value is below our significance threshold then we can conclude that at least one pair of groups has different scores on average. 
+To find out which group we need to investigate further.
+
+For this problem we could use *Tukey's* range test
+```py
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+tukey_results = pairwise_tukeyhsd(data.score, data.major, 0.05)
+print(tukey_results)
+```
+
+### Assumptions of T-test, ANOVA and Tukey
+
+1. Observations should be independently randomly sampled from the population.
+2. The standard deviation of the groups should be equal
+3. The data should be normaly distributed (ish)
+4. The groups created by the categorical variable must be independent
+
+
+
+## Are the outcomes of two categorical variables associated?
+
+Chi-squared test.
+
+e.g. A/B test where half users are shown a green button and half shown a purple button. Was one group more likely to hit the button?
+
+```py
+#create table:
+import pandas as pd
+table = pd.crosstab(variable_1, variable_2)
+ 
+#run the test:
+from scipy.stats import chi2_contingency
+chi2, pval, dof, expected = chi2_contingency(table)
+```
+
+### Assumptions
+
+1. Observations need to be independently sampled
+2. The categories must be mututally exclusive
+3. The gorups shoudl be independent
+
+![image](https://user-images.githubusercontent.com/1227598/135826631-62c83a37-dc64-4596-b84f-da6a94a4224c.png)
+
+
