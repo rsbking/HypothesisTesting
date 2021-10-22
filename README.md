@@ -101,4 +101,11 @@ chi2, pval, dof, expected = chi2_contingency(table)
 
 ![image](https://user-images.githubusercontent.com/1227598/135826631-62c83a37-dc64-4596-b84f-da6a94a4224c.png)
 
+## Chosing a statistical test
+
+![image](https://user-images.githubusercontent.com/1227598/138469920-680752cd-f3c3-46ce-9251-44392fe16706.png)
+| foo | bar |
+| --- | --- |
+| baz | bim |
+
 
