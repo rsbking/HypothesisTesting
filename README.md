@@ -109,3 +109,19 @@ chi2, pval, dof, expected = chi2_contingency(table)
 | Categorical variable   | Binomial test | Chi-2 test | Chi-2 test|
 
 
+# A/B testing: sample size calculators
+
+A method to chose between two options: option A and option B.
+e.g. 
+- Which website design results in more sales
+- Which website design results in higher $ sales
+
+If the outcome is a categorical then we perform the test with Chi-2. e.g. is a sale made.
+To determine the sample size we need to know the following:
+- base line conversion rate
+- minimum detectable effect
+- statistical significance threshold
+
+
+
+
