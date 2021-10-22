@@ -103,9 +103,9 @@ chi2, pval, dof, expected = chi2_contingency(table)
 
 ## Chosing a statistical test
 
-![image](https://user-images.githubusercontent.com/1227598/138469920-680752cd-f3c3-46ce-9251-44392fe16706.png)
-| foo | bar |
-| --- | --- |
-| baz | bim |
+|  | Comparing a sample statistic to a hypothesized population value | Testing for an association between two variables at the population level | Testing for an association between three or more variables at the population level |
+| --- | --- | --- |
+| Quantitive value | one sample t-test |   two sample t-test  | ANOVA and Tukey’s range test |
+| Categorical variable   | Binomial test | Chi-2 test | Chi-2 test|
 
 
