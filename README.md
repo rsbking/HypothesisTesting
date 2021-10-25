@@ -123,5 +123,19 @@ To determine the sample size we need to know the following:
 - statistical significance threshold
 
 
+## Creating your own sample size calculator
+
+- Simulate a population with half having the background rate and half with the minimum detecable effect rate
+- Run a chi-2 test (for categorical outcomes)
+- 'Power' of the test is the True Positive rate. i.e. probability of detecting a difference if there is one. Aim for 80%
+
+- NB even if zero difference between the samples, will see false postive rate equal to the significant threshold we choose.
+
+*Real life trade offs*
+
+- Increasing the sample size increases the power of th test (i.e. the probability of detecting a difference if there is one). 
+- However large sample size takes longer/costs more
+- Increasing the significance threshold also increases the power of the test, but it simultaneously increases the false positive rate.
+- Increasing the minimum detectable efect will increase the power of the test but may not detect smaller but still meaningful effects.
 
 
