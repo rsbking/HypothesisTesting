@@ -30,6 +30,12 @@ I found this blog post useful: https://dpananos.github.io/posts/2019/08/blog-pos
 ## How likely is this distibution of a binary outcome due to the same underlying probability distribution
 
 Binomial test
+```
+scipy.stats.binom_test(x, n=None, p=0.5, alternative='two-sided')
+```
+
+Or newer version `binomtest` but not installed on Code academy :-)
+
 
 ## How likely is this continuous variable distribution to result in a sample average of X
 
